@@ -1,17 +1,20 @@
 import "./ExpenseItem.css";
 
-function ExpenseItem() {
+function ExpenseItem(props) {
+  const month = props.date.toLocaleString("en-US", { month: "long" });
+  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
+  const year = props.date.getFullYear();
   return (
-    <div class="expense-item  w-100 d-flex justify-content-sb align-items-c">
-      <div class="expense-item-left-area d-flex align-items-c">
-        <div class="expense-item_date">
-          <span class="expense-item_date_day">14</span>
-          <span class="expense-item_date_month">August</span>
-          <span class="expense-item_date_year">2023</span>
+    <div className="expense-item  w-100 d-flex justify-content-sb align-items-c">
+      <div className="expense-item-left-area d-flex align-items-c">
+        <div className="expense-item_date">
+          <span className="expense-item_date_day">{day}</span>
+          <span className="expense-item_date_month">{month}</span>
+          <span className="expense-item_date_year">{year}</span>
         </div>
-        <p class="expense-item_title">Bread</p>
+        <p className="expense-item_title">{props.title}</p>
       </div>
-      <p class="expense-item_price">$50.05</p>
+      <p className="expense-item_price">${props.amount}</p>
     </div>
   );
 }

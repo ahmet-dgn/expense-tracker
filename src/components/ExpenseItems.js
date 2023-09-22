@@ -1,19 +1,29 @@
 import "./ExpenseItems.css";
+import React, { useState } from "react";
 import ExpenseItem from "./ExpenseItem";
+import ExpenseFilter from "./ExpenseFilter";
 
-function ExpenseItems() {
+function ExpenseItems(props) {
+  const [filteredYear, setFilteredYear] = useState("2020");
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
   return (
-    <div class="card m-bottom">
-      <div class="d-flex justify-content-sb w-100 align-items-c m-bottom">
-        <p class="filter-text">Filter by year</p>
-        <select name="years" id="years">
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-        </select>
-      </div>
-      <ExpenseItem />
+    <div className="card m-bottom">
+      <ExpenseFilter
+        selected={filteredYear}
+        onChangeFilter={filterChangeHandler}
+      />
+      {props.items.map((expense) => (
+        <ExpenseItem
+          key={expense.id}
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        />
+      ))}
     </div>
   );
 }
