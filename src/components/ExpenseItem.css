@@ -1,0 +1,103 @@
+.expense-item{
+    padding: var(--space-small);
+    background-color: var(--gray-900);
+    border-radius: var(--border-radius-small);
+    color: var(--gray-white);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--space);
+}
+.expense-item:last-of-type{
+    margin-bottom: 0;
+}
+.expense-item_price{
+    font-size: 20px;
+    border: 1px solid var(--gray-white);
+    background: #198754;
+    padding: 6px 12px;
+    height: 38px;
+    line-height: 21px;
+    letter-spacing: -0.1px;
+    border-radius: var(--border-radius-small);
+}
+.expense-item_title{
+    font-size: 20px;
+    margin-left: 20px;
+    letter-spacing: 0.2px;
+}
+.expense-item_date{
+    text-align: center;
+    width: 70px;
+    height: 62px;
+    padding: 5px;
+    border-radius: var(--border-radius-small);
+    background-color: #0D6EFD;
+    border: 1px solid var(--gray-white);
+    
+}
+.expense-item_date_day{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 19px;
+    display: block;
+}
+.expense-item_date_month{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    display: block;
+}
+.expense-item_date_year{
+    font-size: 12px;
+    display: block;
+}
+
+@media(max-width:425px){
+    .expense-item-left-area{
+        flex-direction: column;
+    }
+    .expense-item_date{
+        text-align: unset;
+        width: unset;
+        height: unset;
+        padding: unset;
+        border-radius: unset;
+        background-color: unset;
+        border: unset;
+        display: flex;
+    }
+    .expense-item_date_day,
+    .expense-item_date_month,
+    .expense-item_date_year{
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--gray-600);
+        line-height: 8px;
+    }
+    .expense-item_date_month{
+        margin-left: 2px;
+    }
+    .expense-item_date_year{
+        margin-left: 3px;
+    }
+    .expense-item{
+        height: 73px;
+        align-items: end;
+    }
+    .expense-item_price{
+        font-size: 16px;
+        line-height: 16px;
+        height: 30px;
+        letter-spacing: unset;
+    }
+    .expense-item-left-area{
+        justify-content: space-between;
+        height: 100%;
+        align-items: unset;
+    }
+    .expense-item_title{
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: -0.2px;
+    }
+}
