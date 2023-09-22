@@ -1,21 +1,14 @@
 import "./ExpenseItems.css";
 import React, { useState } from "react";
 import ExpenseItem from "./ExpenseItem";
-import ExpenseFilter from "./ExpenseFilter";
 
 function ExpenseItems(props) {
-  const [filteredYear, setFilteredYear] = useState("2020");
-
-  const filterChangeHandler = (selectedYear) => {
-    setFilteredYear(selectedYear);
-  };
+  if (props.items.length === 0) {
+    return <h2 className="expense-item-nofound">Found no expenses.</h2>;
+  }
 
   return (
-    <div className="card m-bottom">
-      <ExpenseFilter
-        selected={filteredYear}
-        onChangeFilter={filterChangeHandler}
-      />
+    <div className="w-100">
       {props.items.map((expense) => (
         <ExpenseItem
           key={expense.id}

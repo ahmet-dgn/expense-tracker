@@ -6,7 +6,7 @@ function NewExpense(props) {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    props.onAddExpense(expenseData);
+    props.onAddExpense(expenseData); //App.js den gelen prop a burdaki expenseData fonksiyonunu parametre olarak ekliyoruz ve lifting up yapmış oluyoruz.
   };
   return <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />;
 }

@@ -7,7 +7,9 @@
         line-height: 16px;
     }
 }
-
+.expense-item-nofound{
+    color: var(--gray-white);
+}
 #years{
     background-color: var(--gray-600);
 }
