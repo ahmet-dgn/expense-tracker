@@ -1,13 +1,110 @@
-body {
+:root{
+  --gray-white: #FFF;
+  --gray-900: #212529;
+  --gray-700: #495057;
+  --gray-600: #6C757D;
+  --gray-500: #ADB5BD;
+  --gray-400: #CED4DA;
+  --gray-200: #E9ECEF;
+  --box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.50);
+  --border-radius-big: 8px;
+  --border-radius-small: 4px;
+  --space: 22px;
+  --space-small: 11px;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  background: var(--gray-900);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+}
+p{
+  margin: 0;
+}
+h1{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+button{
+  padding-block: 0;
+  padding-inline: 0;
+  border-width: 0;
+}
+.w-100{
+  width: 100%;
+}
+.w-50{
+  width: 50%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.d-flex{
+  display: flex;
+}
+.justify-content-c{
+  justify-content: center;
+}
+.justify-content-e{
+  justify-content: end;
+}
+.justify-content-sb{
+  justify-content: space-between;
+}
+.align-items-c{
+  align-items: center;
+}
+
+.m-bottom{
+  margin-bottom: var(--space)
+}
+.p-left-s{
+  padding-left: var(--space-small);
+}
+.p-right-s{
+  padding-right: var(--space-small);
+}
+@media(max-width:425px){
+  .w-100-sm{
+      width: 100%;
+  }
+  .p-left-sm-zero{
+      padding-left: 0;
+  }
+  .p-right-sm-zero{
+      padding-right: 0;
+  }
+}
+.card{
+  width: 696px;
+  max-width: 100%;
+  padding: var(--space);
+  box-shadow: var(--box-shadow);
+  background: var(--gray-700);
+  border-radius: var(--border-radius-big);
+  margin-left:auto ;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button,select{
+  padding: 6px 12px;
+  height: 38px;
+  border-radius:var(--border-radius-small);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; 
+  color: white;
+  outline: none;
+  letter-spacing: -0.3px;
+}
+
+@media (max-width:425px){
+  button{
+      font-size: 14px;
+      height: 35px;
+      letter-spacing: -0.4px;
+  }
 }

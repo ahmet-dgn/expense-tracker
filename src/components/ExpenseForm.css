@@ -1,0 +1,45 @@
+.cancel-btn{
+    border: 1px solid #DC3545;
+    background: #DC3545;
+}
+.add-btn{
+    border: 1px solid #198754;
+    background: #198754;
+    margin-left: var(--space-small);
+}
+
+/*form*/
+input{
+    height: 38px;
+    border-radius: var(--border-radius-small);
+    background: var(--gray-white);
+    max-width: 100%;
+    border: 1px solid var(--gray-400);
+    margin-top: 11px;
+    padding: 6px 12px;
+}
+label{
+   display: block;
+   line-height: 11px;
+   color: var(--gray-white);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 20px;
+    padding: 0px;
+    margin-right: -4px;
+
+}
+::placeholder,
+input[type="date"] {
+    letter-spacing: 0.1px;
+    font-size: 16px;
+    color: var(--gray-500);
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="date"] {
+    letter-spacing: -0.7px; 
+}
+
+/*form*/

@@ -1,0 +1,28 @@
+.title{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 25px;
+    color: var(--gray-200);
+    border: 1px solid var(--gray-200);
+    padding: 10px;
+    width: fit-content;
+    margin-left: 4px;
+    margin-top: 80px;
+    margin-bottom: var(--space);
+    border-radius: var(--border-radius-small);
+    line-height: 16px;
+    padding-right: 4.1px;
+    padding-left: 10.4px;
+}
+
+@media (max-width:725px) {
+    .title{
+        font-size: 20px;
+        line-height: 12px;
+        letter-spacing: 4px;
+        margin-right: 1px;
+        margin-left: 0px;
+        margin-top: 84px;
+    }
+}
