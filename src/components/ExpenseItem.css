@@ -15,7 +15,7 @@
     background: #198754;
     padding: 6px 12px;
     height: 38px;
-    line-height: 21px;
+    line-height: 24px;
     letter-spacing: -0.1px;
     border-radius: var(--border-radius-small);
 }
@@ -39,11 +39,12 @@
     font-weight: 700;
     line-height: 19px;
     display: block;
+    margin-bottom: 2px;
 }
 .expense-item_date_month{
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 1px;
+    margin-bottom: 3px;
     display: block;
 }
 .expense-item_date_year{

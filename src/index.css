@@ -20,6 +20,17 @@ body{
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
+@media (max-width: 725px) {
+  body {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media (max-width: 725px) {
+  .card {
+    padding: 22px 11px !important;
+  }
+}
 p{
   margin: 0;
 }
