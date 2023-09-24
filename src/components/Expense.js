@@ -3,7 +3,7 @@ import ExpenseItems from "./ExpenseItems";
 import ExpenseFilter from "./ExpenseFilter";
 
 function Expense(props) {
-  const [filteredYear, setFilteredYear] = useState("2020");
+  const [filteredYear, setFilteredYear] = useState("2023");
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);

@@ -112,6 +112,7 @@ button,select{
   letter-spacing: -0.3px;
 }
 
+
 @media (max-width:425px){
   button{
       font-size: 14px;
