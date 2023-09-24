@@ -40,7 +40,7 @@ function ExpenseForm(props) {
         value={enteredTitle}
         onChange={titleChangeHandler}
       />
-      <div className="w-50 w-100-sm p-right-s p-right-sm-zero m-bottom">
+      <div className="w-50 w-100-sm p-right-s p-right-sm-zero m-bottom dateInput">
         <label>Date</label>
         <input
           className="w-100 "
