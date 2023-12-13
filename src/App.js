@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import ExpenseTitle from "./components/ExpenseTitle";
 import NewExpense from "./components/NewExpense";
 import Expense from "./components/Expense";
-import PixelPerfectChecker from "./pixel-perfect-checker/PixelPerfectChecker";
 
 const ExpenseData = [
   {
@@ -46,7 +45,6 @@ function App() {
   };
   return (
     <div>
-      <PixelPerfectChecker />
       <ExpenseTitle />
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expense items={expenses} />

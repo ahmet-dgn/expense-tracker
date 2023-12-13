@@ -37,10 +37,16 @@ input[type="date"] {
     color: var(--gray-500);
     font-family: 'Roboto', sans-serif;
 }
-
 input[type="date"] {
     letter-spacing: -0.7px; 
-    min-width: 95%;
+
 }
+
+@media(max-width:450px){
+    input[type="date"] {
+        min-width: 95%;
+    }
+}
+
 
 /*form*/
